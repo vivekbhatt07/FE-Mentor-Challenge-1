@@ -1,9 +1,5 @@
 /* { color: hsl(228, 45%, 44%); } */
-/* Bright orange: hsl(31, 77%, 52%) */
-/* Dark cyan: hsl(184, 100%, 22%) */
-/* Very dark cyan: hsl(179, 100%, 13%) */
 
-/* Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75) */
 /* Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
 
 /* The designs were created to the following widths:
@@ -19,6 +15,11 @@
   --secondary-font: "Lexend Deca", sans-serif;
   --regular-weight: 400;
   --bold-weight: 700;
+  --primary-card-bg: hsl(31, 77%, 52%);
+  --secondary-card-bg: hsl(184, 100%, 22%);
+  --tertiary-card-bg: hsl(179, 100%, 13%);
+  --para-color: hsla(0, 0%, 100%, 0.75);
+  --head-color: hsl(0, 0%, 95%);
 }
 
 body {
