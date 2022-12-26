@@ -49,7 +49,7 @@ h1 {
   line-height: 1.2;
 }
 
-button {
+a {
   font-size: 15px;
   text-transform: capitalize;
   border: none;
@@ -57,7 +57,9 @@ button {
   background-color: var(--head-color);
   font-family: inherit;
   padding: 0.6em 1.4em;
-  cursor: pointer;
+  text-decoration: none;
+  transition-property: background transform border;
+  transition-duration: 0.5s;
 }
 
 p {
@@ -66,30 +68,41 @@ p {
 
 /* CARD BG COLOR */
 
-#primary-card {
+.primary-card {
   background-color: var(--primary-card-bg);
 }
 
-#secondary-card {
+.secondary-card {
   background-color: var(--secondary-card-bg);
 }
 
-#tertiary-card {
+.tertiary-card {
   background-color: var(--tertiary-card-bg);
 }
 
 /* CARD BUTTON COLOR */
 
-#primary-card-btn {
+.primary-card-btn {
   color: var(--primary-card-bg);
 }
 
-#secondary-card-btn {
+.secondary-card-btn {
   color: var(--secondary-card-bg);
 }
 
-#tertiary-card-btn {
+.tertiary-card-btn {
   color: var(--tertiary-card-bg);
+}
+
+.card-btn:hover,
+.card-btn:focus {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.card-btn:active {
+  transform: scale(0.98);
 }
 
 /* ************* */
@@ -132,19 +145,34 @@ p {
 
 .card-btn {
   grid-area: btn;
+  justify-self: start;
 }
 
 .card-title {
   letter-spacing: 2px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 800px) {
   body {
     min-height: 100vh;
   }
 
   .card-wrapper {
-    grid-template: 1fr / repeat(3, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     margin: 0;
+  }
+
+  .tertiary-card {
+    grid-column: 1 /-1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card-wrapper {
+    grid-template: 1fr / repeat(3, 1fr);
+  }
+
+  .tertiary-card {
+    grid-column: auto;
   }
 }
