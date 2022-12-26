@@ -1,0 +1,26 @@
+/* { color: hsl(228, 45%, 44%); } */
+/* Bright orange: hsl(31, 77%, 52%) */
+/* Dark cyan: hsl(184, 100%, 22%) */
+/* Very dark cyan: hsl(179, 100%, 13%) */
+
+/* Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75) */
+/* Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+:root {
+  --primary-font: "Big Shoulders Display", cursive;
+  --secondary-font: "Lexend Deca", sans-serif;
+  --regular-weight: 400;
+  --bold-weight: 700;
+}
+
+body {
+  font-size: 15px;
+}
