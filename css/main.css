@@ -15,11 +15,12 @@
   --secondary-font: "Lexend Deca", sans-serif;
   --regular-weight: 400;
   --bold-weight: 700;
-  --primary-card-bg: hsl(31, 77%, 52%);
-  --secondary-card-bg: hsl(184, 100%, 22%);
-  --tertiary-card-bg: hsl(179, 100%, 13%);
+  --primary-card-color: hsl(31, 77%, 52%);
+  --secondary-card-color: hsl(184, 100%, 22%);
+  --tertiary-card-color: hsl(179, 100%, 13%);
   --para-color: hsla(0, 0%, 100%, 0.75);
   --head-color: hsl(0, 0%, 95%);
+  --button-color: hsl(0, 0%, 95%);
 }
 
 *,
@@ -38,6 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 h1 {
@@ -54,7 +56,7 @@ a {
   text-transform: capitalize;
   border: none;
   border-radius: 26px;
-  background-color: var(--head-color);
+  background-color: var(--button-color);
   font-family: inherit;
   padding: 0.6em 1.4em;
   text-decoration: none;
@@ -69,40 +71,40 @@ p {
 /* CARD BG COLOR */
 
 .primary-card {
-  background-color: var(--primary-card-bg);
+  background-color: var(--primary-card-color);
 }
 
 .secondary-card {
-  background-color: var(--secondary-card-bg);
+  background-color: var(--secondary-card-color);
 }
 
 .tertiary-card {
-  background-color: var(--tertiary-card-bg);
+  background-color: var(--tertiary-card-color);
 }
 
 /* CARD BUTTON COLOR */
 
 .primary-card-btn {
-  color: var(--primary-card-bg);
+  color: var(--primary-card-color);
 }
 
 .secondary-card-btn {
-  color: var(--secondary-card-bg);
+  color: var(--secondary-card-color);
 }
 
 .tertiary-card-btn {
-  color: var(--tertiary-card-bg);
+  color: var(--tertiary-card-color);
 }
 
 .card-btn:hover,
 .card-btn:focus {
   background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+  color: var(--button-color);
+  border: 2px solid var(--button-color);
 }
 
 .card-btn:active {
-  transform: scale(0.98);
+  transform: scale(0.96);
 }
 
 /* ************* */
@@ -114,7 +116,7 @@ p {
   grid-template: repeat(3, 1fr) / 1fr;
   width: 90%;
   max-width: 1000px;
-  margin: 60px 0;
+  margin: 5em 0;
 }
 
 .card {
@@ -153,11 +155,8 @@ p {
 }
 
 @media (min-width: 800px) {
-  body {
-    min-height: 100vh;
-  }
-
   .card-wrapper {
+    margin: 0;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     margin: 0;
   }
